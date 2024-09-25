@@ -79,7 +79,7 @@ class PdfDocument(
                 }
             }
 //            Timber.d("openPage: pageIndex: $pageIndex")
-
+            Log.d("PdfKit", "my Message::")
             val pagePtr = nativeLoadPage(this.mNativeDocPtr, pageIndex)
             pageMap[pageIndex] = PageCount(pagePtr, 1)
             return PdfPage(this, pageIndex, pagePtr, pageMap)
